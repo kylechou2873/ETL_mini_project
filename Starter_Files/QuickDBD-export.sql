@@ -27,7 +27,10 @@ CREATE TABLE "category" (
     "category" VARCHAR(20)   NOT NULL,
     CONSTRAINT "pk_category" PRIMARY KEY (
         "category_ids"
-     )
+     ),
+    CONSTRAINT "uc_category_category" UNIQUE (
+        "category"
+    )
 );
 
 CREATE TABLE "subcategory" (
@@ -35,7 +38,10 @@ CREATE TABLE "subcategory" (
     "subcategory" VARCHAR(20)   NOT NULL,
     CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_ids"
-     )
+     ),
+    CONSTRAINT "uc_subcategory_subcategory" UNIQUE (
+        "subcategory"
+    )
 );
 
 CREATE TABLE "contact" (
@@ -45,7 +51,10 @@ CREATE TABLE "contact" (
     "email" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_contact" PRIMARY KEY (
         "contact_id"
-     )
+     ),
+    CONSTRAINT "uc_contact_email" UNIQUE (
+        "email"
+    )
 );
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
