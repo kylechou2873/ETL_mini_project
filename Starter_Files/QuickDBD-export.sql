@@ -68,13 +68,13 @@ REFERENCES "subcategory" ("subcategory_ids");
 
 --SELECT STATMENTS
 SELECT * 
-FROM campaign
+FROM campaign;
 
 SELECT * 
-FROM contact
+FROM contact;
 
 SELECT * 
-FROM category
+FROM category;
 
 SELECT *
-FROM subcategory
+FROM subcategory;
