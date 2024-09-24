@@ -66,3 +66,15 @@ REFERENCES "category" ("category_ids");
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_ids" FOREIGN KEY("subcategory_ids")
 REFERENCES "subcategory" ("subcategory_ids");
 
+--SELECT STATMENTS
+SELECT * 
+FROM campaign
+
+SELECT * 
+FROM contact
+
+SELECT * 
+FROM category
+
+SELECT *
+FROM subcategory
